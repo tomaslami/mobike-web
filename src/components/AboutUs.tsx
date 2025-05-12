@@ -14,7 +14,7 @@ export default function AboutUs() {
               Nuestros guantes son reconocidos por su impermeabilidad y compatibilidad con pantallas táctiles, ofreciendo comodidad y funcionalidad en cualquier situación.
             </p>
             <p className="text-[#333333]">
-              Ahora, nos complace anunciar nuestro nuevo desafío: la creación de guantes de trabajo para el hogar y la industria minera y petrolera, cumpliendo con los más altos estándares internacionales.
+              Ahora, nos complace anunciar nuestro nuevo desafío: la comercialización de guantes de trabajo para el hogar y la industria minera y petrolera, cumpliendo con los más altos estándares internacionales.
             </p>
           </div>
           <div className="bg-[#F5F5F5] h-full rounded-md flex items-center justify-center">

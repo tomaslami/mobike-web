@@ -35,7 +35,7 @@ const defaultProducts: Product[] = [
   {
     id: "termico-polar-2",
     name: "Guante Ski Reforzado",
-    category: "Guantes de Frío",
+    category: "Guantes de SKI",
     imageUrl: "/images/Kombi-12.png",
   },
   {
