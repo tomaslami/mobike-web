@@ -33,14 +33,26 @@ export default function Header() {
     }
   }, [scrolled])
 
+  const handleNavigation = () => {
+    setIsOpen(false)
+  }
+
   return (
     <nav
       className={`w-full lg:max-w-[1250px] max-w-[95%] h-[80px] flex items-center justify-center fixed top-8 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 backdrop-blur-lg rounded-lg bg-white/20 border border-[#1D2F4E]`}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center justify-center">
-          <div className="relative h-[45px] w-[190px]">
-            <Image src="/images/logo-mobike.png" alt="MOBIKE Logo" width={190} height={45} className="object-contain" />
+          <div className="relative h-[45px] w-[190px] sm:h-[50px] sm:w-[200px]">
+            <Image 
+              src="/images/logo-mobike.png" 
+              alt="MOBIKE Logo" 
+              width={200} 
+              height={50} 
+              className="object-contain w-full h-full"
+              quality={100}
+              priority
+            />
           </div>
         </Link>
 
@@ -62,33 +74,61 @@ export default function Header() {
                 Menú
               </SheetTitle>
               <Separator className="w-full my-2 bg-[#000] h-[2px]" />
-              <ul className="flex flex-col gap-6 mt-2">
-              <Link href="/#quienes-somos" className="text-[#1D2F4E] text-2xl font-semibold">
-                Quienes somos
-              </Link>
-              <Link href="/#como-trabajamos" className="text-[#1D2F4E] text-2xl font-semibold">
-                Como trabajamos
-              </Link>
-              <Link href="/#catalogo" className="text-[#1D2F4E] text-2xl font-semibold">
-                Catálogo
-              </Link>
-              <Link href="/#distribuidor" className="text-[#1D2F4E] text-2xl font-semibold">
-                ¿Quieres ser distribuidor?
-              </Link>
+              <ul className="flex flex-col gap-8 mt-2">
+                <li>
+                  <Link 
+                    href="/#quienes-somos" 
+                    className="text-[#1D2F4E] text-2xl font-semibold"
+                    onClick={handleNavigation}
+                  >
+                    Quienes somos
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/#como-trabajamos" 
+                    className="text-[#1D2F4E] text-2xl font-semibold"
+                    onClick={handleNavigation}
+                  >
+                    Como trabajamos
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/#catalogo" 
+                    className="text-[#1D2F4E] text-2xl font-semibold"
+                    onClick={handleNavigation}
+                  >
+                    Catálogo
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/#distribuidor" 
+                    className="text-[#1D2F4E] text-2xl font-semibold"
+                    onClick={handleNavigation}
+                  >
+                    ¿Quieres ser distribuidor?
+                  </Link>
+                </li>
               </ul>
-              <Link href="https://wa.me/5491134943796" className="bg-[#1D2F4E] text-white px-4 py-2 mt-2 rounded-md hover:bg-[#1D2F4E]/90 text-xl">
+              <Link 
+                href="https://wa.me/5491134943796" 
+                className="bg-[#1D2F4E] text-white px-4 py-2 mt-2 rounded-md hover:bg-[#1D2F4E]/90 text-xl"
+                onClick={handleNavigation}
+              >
                 Contacto
               </Link>
               <SheetClose className="" asChild>
-                    <Button
-                      variant="ghost"
-                      size={"lg"}
-                      className="text-white"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <span className="sr-only">Close menu</span>
-                      ×
-                    </Button>
+                <Button
+                  variant="ghost"
+                  size={"lg"}
+                  className="text-white"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <span className="sr-only">Close menu</span>
+                  ×
+                </Button>
               </SheetClose>
             </SheetContent>
           </Sheet>
