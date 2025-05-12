@@ -74,7 +74,7 @@ export default function ProductCard({ name, imageUrl, temperature, category }: P
             </p>
           )}
           {temperature && <p className="text-sm mb-2">Resistente a temperaturas de hasta {temperature}</p>}
-          <Link href="https://wa.me/5491134943796" className="w-full bg-[#1a4b8e] text-white py-2 text-sm font-medium hover:bg-[#0d3b7a] transition-colors cursor-pointer">
+          <Link href="https://wa.me/5491134943796" className="w-full bg-[#1a4b8e] text-white py-2 px-2 text-sm font-medium hover:bg-[#0d3b7a] transition-colors cursor-pointer">
             Consultar por este producto
           </Link>
         </motion.div>
