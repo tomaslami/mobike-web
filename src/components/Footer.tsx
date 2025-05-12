@@ -29,21 +29,21 @@ export default function Footer() {
             <h4 className="text-white font-medium mb-4">Contacto</h4>
             <ul className="space-y-2 text-sm">
               <li>+54 11 4567-8900</li>
-              <li>contacto@mobike.com.ar</li>
+              <li>info@mobike.com.ar</li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-white font-medium mb-4">¿Querés ser distribuidor?</h4>
             <p className="text-sm mb-4">Contactanos para conocer todos los beneficios y condiciones para ser distribuidor oficial.</p>
-            <Link href="https://wa.me/5491134943796" className="text-white border border-white px-4 py-2 rounded inline-block text-sm  hover:text-primary transition-colors">
+            <Link href="https://wa.me/5491134943796" className="text-white border border-white px-4 py-2 rounded inline-block text-sm transition-colors">
               Contactanos
             </Link>
           </div>
         </div>
         <div className="border-t border-gray-700 mt-8 pt-6 text-sm text-center md:text-left">
           <p>©2025 Mobike. Todos los derechos reservados</p>
-          <p className="text-xs">Diseño y desarrollo por <Link href="https://synera.com.ar" className="text-white hover:text-gray-300">Synera</Link></p>
+          <p className="text-xs ">Diseñado y desarrollado por <Link href="https://synera.com.ar" className="text-white hover:text-gray-300 font-bold">Synera</Link></p>
         </div>
       </div>
     </footer>

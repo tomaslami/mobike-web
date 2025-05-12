@@ -1,6 +1,42 @@
+"use client"
+
 import Image from "next/image";
+import { useState } from "react";
+import { toast } from "sonner";
+import { handleSubmit } from "@/actions/contact-action";
 
 export default function Contact() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setIsLoading(true);
+
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("phone", phone);
+    formData.append("email", email);
+    formData.append("message", message);
+
+    const response = await handleSubmit(formData);
+
+    if (response.status === 200) {
+      toast.success(response.message);
+      setName("");
+      setPhone("");
+      setEmail("");
+      setMessage("");
+    } else {
+      toast.error(response.message);
+    }
+
+    setIsLoading(false);
+  }
+
   return (
     <section id="contacto" className="section bg-white scroll-m-16">
       <div className="container">
@@ -11,26 +47,67 @@ export default function Contact() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="contact-form">
-            <form>
+            <form onSubmit={onSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="nombre" className="block mb-1 text-sm">Nombre Completo</label>
-                  <input type="text" id="nombre" placeholder="Escribe tu nombre completo" />
+                  <label htmlFor="name" className="block mb-1 text-sm">Nombre</label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    name="name"
+                    placeholder="Nombre" 
+                    required
+                    className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#1D2F4E]"
+                    value={name}
+                    onChange={e => setName(e.target.value)}
+                  />
                 </div>
                 <div>
-                  <label htmlFor="empresa" className="block mb-1 text-sm">Empresa</label>
-                  <input type="text" id="empresa" placeholder="Nombre de tu empresa (si aplica)" />
+                  <label htmlFor="phone" className="block mb-1 text-sm">Número de teléfono</label>
+                  <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone"
+                    placeholder="Número de teléfono" 
+                    required
+                    className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#1D2F4E]"
+                    value={phone}
+                    onChange={e => setPhone(e.target.value)}
+                  />
                 </div>
               </div>
-              <div>
+              <div className="mt-4">
                 <label htmlFor="email" className="block mb-1 text-sm">Correo Electrónico</label>
-                <input type="email" id="email" placeholder="tucorreo@ejemplo.com" />
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email"
+                  placeholder="tucorreo@ejemplo.com" 
+                  required
+                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#1D2F4E]"
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
+                />
               </div>
-              <div>
-                <label htmlFor="mensaje" className="block mb-1 text-sm">Mensaje</label>
-                <textarea id="mensaje" rows={4} placeholder="En qué podemos ayudarte?"></textarea>
+              <div className="mt-4">
+                <label htmlFor="message" className="block mb-1 text-sm">Mensaje</label>
+                <textarea 
+                  id="message" 
+                  name="message"
+                  rows={4} 
+                  placeholder="En qué podemos ayudarte?" 
+                  className="w-full px-3 py-2 border rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-[#1D2F4E]"
+                  value={message}
+                  onChange={e => setMessage(e.target.value)}
+                ></textarea>
               </div>
-              <button type="submit" className="mt-2">Enviar Mensaje</button>
+              <button 
+                type="submit" 
+                disabled={isLoading}
+                className="mt-4 w-full bg-[#1D2F4E] text-white py-2 px-4 rounded-md hover:bg-[#1D2F4E]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isLoading ? "Enviando..." : "Enviar Mensaje"}
+              </button>
             </form>
           </div>
           
@@ -49,7 +126,7 @@ export default function Contact() {
               <Image src="/icons/email.svg" alt="Email" width={20} height={20} />
               <div>
                 <h4 className="font-medium text-[#1D2F4E]">Email</h4>
-                <p className="text-sm">contacto@mobike.com.ar</p>
+                <p className="text-sm">info@mobike.com.ar</p>
               </div>
             </div>
           </div>

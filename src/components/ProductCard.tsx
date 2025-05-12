@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 type ProductCardProps = {
   name: string
@@ -73,9 +74,9 @@ export default function ProductCard({ name, imageUrl, temperature, category }: P
             </p>
           )}
           {temperature && <p className="text-sm mb-2">Resistente a temperaturas de hasta {temperature}</p>}
-          <button className="w-full bg-[#1a4b8e] text-white py-2 text-sm font-medium hover:bg-[#0d3b7a] transition-colors cursor-pointer">
+          <Link href="https://wa.me/5491134943796" className="w-full bg-[#1a4b8e] text-white py-2 text-sm font-medium hover:bg-[#0d3b7a] transition-colors cursor-pointer">
             Consultar por este producto
-          </button>
+          </Link>
         </motion.div>
       </div>
 

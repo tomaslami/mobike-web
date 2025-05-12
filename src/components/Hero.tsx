@@ -32,7 +32,7 @@ export default function Hero() {
               Contactarse
               <span className="ml-2 transform transition-transform group-hover:translate-x-1">→</span>
             </Link>
-            <Link href="#" className="text-[#1D2F4E] py-2 px-4 rounded text-sm font-medium transition border border-[#1D2F4E] ">Leer más</Link>
+            <Link href="#como-trabajamos" className="text-[#1D2F4E] py-2 px-4 rounded text-sm font-medium transition border border-[#1D2F4E] ">Leer más</Link>
           </div>
         </div>
       </div>
