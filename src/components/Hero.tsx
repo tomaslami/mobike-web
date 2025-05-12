@@ -13,8 +13,10 @@ export default function Hero() {
           className="object-cover"
           priority
         />
-        {/* Gradient overlay at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/30 to-transparent"></div>
+        <div
+          className="absolute inset-0 bg-gradient-to-b from-white-/10 via-white/60 to-white"
+          aria-hidden="true"
+        />
       </div>
       
       {/* Content Box */}
