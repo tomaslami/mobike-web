@@ -8,13 +8,13 @@ export default function AboutUs() {
           <div>
             <h2 className="text-4xl text-[#1D2F4E] font-semibold mb-4">¿Quiénes somos?</h2>
             <p className="mb-4 text-[#333333]">
-              Con más de 15 años de experiencia en el mercado argentino, Mobike se especializa en la importación, desarrollo y distribución mayorista de guantes de motaje de alta calidad.
+              Somos Mobike, una empresa con más de 10 años de trayectoria en la fabricación de guantes de alta calidad. Nos destacamos por crear productos diseñados para la vida urbana y deportes de invierno, como esquí o snowboard.
             </p>
             <p className="mb-4 text-[#333333]">
-              Nuestra trayectoria está respaldada por relaciones sólidas con fabricantes internacionales selectos, lo que nos permite ofrecer productos confiables y precios competitivos ofrecen soluciones que combinan durabilidad, seguridad y rendimiento excepcional de cada cliente.
+              Nuestros guantes son reconocidos por su impermeabilidad y compatibilidad con pantallas táctiles, ofreciendo comodidad y funcionalidad en cualquier situación.
             </p>
             <p className="text-[#333333]">
-              En Mobike creemos en la transparencia y la confianza como pilares fundamentales de nuestras relaciones comerciales. Nuestro compromiso constante con la excelencia en el servicio y la calidad de nuestros productos demuestra nuestra dedicación excepcional de cada cliente.
+              Ahora, nos complace anunciar nuestro nuevo desafío: la creación de guantes de trabajo para el hogar y la industria minera y petrolera, cumpliendo con los más altos estándares internacionales.
             </p>
           </div>
           <div className="bg-[#F5F5F5] h-full rounded-md flex items-center justify-center">
