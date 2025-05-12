@@ -118,7 +118,7 @@ export default function Contact() {
               <Image src="/icons/phone.svg" alt="Teléfono" width={20} height={20} />
               <div>
                 <h4 className="font-medium text-[#1D2F4E]">Teléfono</h4>
-                <p className="text-sm">+54 11 4567-8900</p>
+                <p className="text-sm">+54 9 11 3494-3796</p>
               </div>
             </div>
             

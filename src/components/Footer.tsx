@@ -28,7 +28,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-medium mb-4">Contacto</h4>
             <ul className="space-y-2 text-sm">
-              <li>+54 11 4567-8900</li>
+              <li>+54 9 11 3494-3796</li>
               <li>info@mobike.com.ar</li>
             </ul>
           </div>
