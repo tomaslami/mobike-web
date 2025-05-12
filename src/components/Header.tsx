@@ -39,7 +39,7 @@ export default function Header() {
 
   return (
     <nav
-      className={`w-full lg:max-w-[1250px] max-w-[95%] h-[80px] flex items-center justify-center fixed top-8 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 backdrop-blur-lg rounded-lg bg-white/20 border border-[#1D2F4E]`}
+      className={`w-full lg:max-w-[1250px] max-w-[95%] h-[80px] flex items-center justify-center fixed top-4 sm:top-8 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 backdrop-blur-lg rounded-lg bg-white/20 border border-[#1D2F4E]`}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center justify-center">
@@ -78,7 +78,7 @@ export default function Header() {
                 <li>
                   <Link 
                     href="/#quienes-somos" 
-                    className="text-[#1D2F4E] text-2xl font-semibold"
+                    className="text-[#1D2F4E] text-xl font-semibold"
                     onClick={handleNavigation}
                   >
                     Quienes somos
@@ -87,7 +87,7 @@ export default function Header() {
                 <li>
                   <Link 
                     href="/#como-trabajamos" 
-                    className="text-[#1D2F4E] text-2xl font-semibold"
+                    className="text-[#1D2F4E] text-xl font-semibold"
                     onClick={handleNavigation}
                   >
                     Como trabajamos
@@ -96,7 +96,7 @@ export default function Header() {
                 <li>
                   <Link 
                     href="/#catalogo" 
-                    className="text-[#1D2F4E] text-2xl font-semibold"
+                    className="text-[#1D2F4E] text-xl font-semibold"
                     onClick={handleNavigation}
                   >
                     Catálogo
@@ -105,7 +105,7 @@ export default function Header() {
                 <li>
                   <Link 
                     href="/#distribuidor" 
-                    className="text-[#1D2F4E] text-2xl font-semibold"
+                    className="text-[#1D2F4E] text-xl font-semibold"
                     onClick={handleNavigation}
                   >
                     ¿Quieres ser distribuidor?
