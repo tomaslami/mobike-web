@@ -20,10 +20,10 @@ function CatalogCard({ title, description, imageUrl, pdfUrl }: Omit<Catalog, "id
         className="object-cover w-full h-full absolute inset-0 z-0 opacity-80"
         sizes="(max-width: 768px) 100vw, 50vw"
       />
-      <div className="relative z-10 p-5 flex flex-col justify-end h-full bg-gradient-to-t from-[#0e223a]/80 to-transparent border border-[#0e223a]">
+      <div className="relative z-10 p-5 flex flex-col justify-end h-full bg-gradient-to-t from-[#1D2F4E]/80 to-transparent border border-[#1D2F4E]">
         <div className="flex justify-between items-center">
           <h3 className="text-white text-xl font-bold mb-1 drop-shadow-lg">{title}</h3>
-          <Link href={pdfUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-[#1a4b8e] font-semibold px-4 py-2  shadow hover:bg-gray-100 transition text-sm cursor-pointer">
+          <Link href={pdfUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-[#1D2F4E] font-semibold px-4 py-2  shadow hover:bg-gray-100 transition text-sm cursor-pointer">
               Ver PDF
           </Link>
         </div>
@@ -54,7 +54,7 @@ export default function ProductCatalog({ catalogs = defaultCatalogs }: { catalog
   return (
     <section className="py-12 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-10">
-        <h2 className="text-4xl font-bold mb-2 text-[#1a4b8e]">Nuestros Catálogos</h2>
+        <h2 className="text-4xl font-bold mb-2 text-[#1D2F4E]">Nuestros Catálogos</h2>
         <p className="text-gray-700 max-w-2xl mx-auto text-base">
           Importamos productos de la más alta calidad para satisfacer las necesidades de su industria.
         </p>
