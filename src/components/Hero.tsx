@@ -26,8 +26,7 @@ export default function Hero() {
             Impulsando la protección y la moda en cada estación.
           </h1>
           <p className="text-[#333333] mb-6 text-center text-sm md:text-base">
-            Con más de 15 años de experiencia, somos distribuidores
-            de guantes de seguridad, estilo y protección, en más de 80 puntos.
+          Con más de una década de experiencia, nuestra marca es sinónimo de seguridad, estilo y desempeño en cada producto.
           </p>
           <div className="flex flex-row gap-3 justify-center">
             <Link href="https://wa.me/5491134943796" className="group bg-[#1D2F4E] text-white py-2 px-4 rounded text-sm font-medium hover:bg-[#1D2F4E]/90 transition flex items-center justify-center">
