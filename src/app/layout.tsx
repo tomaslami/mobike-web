@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import { Toaster } from "sonner";
 import "./globals.css";
+import FloatingButton from "@/components/FloatingButton";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${montserrat.variable} antialiased`}>
         {children}
         <Toaster richColors position="top-center" />
+        <FloatingButton phoneNumber="5491134943796" />
       </body>
     </html>
   );
