@@ -29,8 +29,8 @@ export default function Hero() {
           Con más de una década de experiencia, nuestra marca es sinónimo de seguridad, estilo y desempeño en cada producto.
           </p>
           <div className="flex flex-row gap-3 justify-center">
-            <Link href="https://wa.me/5491134943796" className="group bg-[#1D2F4E] text-white py-2 px-4 rounded text-sm font-medium hover:bg-[#1D2F4E]/90 transition flex items-center justify-center">
-              Contactarse
+            <Link href="https://wa.me/5491134943796" className="group bg-[#1D2F4E] text-white py-3 px-4 rounded font-medium hover:bg-[#1D2F4E]/90 transition flex items-center justify-center text-md">
+              Contactanos
               <span className="ml-2 transform transition-transform group-hover:translate-x-1">→</span>
             </Link>
             <Link href="#como-trabajamos" className="text-[#1D2F4E] py-2 px-4 rounded text-sm font-medium transition border border-[#1D2F4E] ">Leer más</Link>

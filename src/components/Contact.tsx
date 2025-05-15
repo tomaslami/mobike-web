@@ -104,7 +104,7 @@ export default function Contact() {
               <button 
                 type="submit" 
                 disabled={isLoading}
-                className="mt-4 w-full bg-[#1D2F4E] text-white py-3 px-4 rounded-md hover:bg-[#1D2F4E]/90 transition-colors disabled:opacity-50 text-lg disabled:cursor-not-allowed"
+                className="mt-4 w-full bg-[#1D2F4E] text-white py-3 px-4 rounded-md hover:bg-[#1D2F4E]/90 transition-colors disabled:opacity-50 text-md disabled:cursor-not-allowed"
               >
                 {isLoading ? "Enviando..." : "Enviar Mensaje"}
               </button>

@@ -35,7 +35,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-medium mb-4">¿Querés ser distribuidor?</h4>
             <p className="text-sm mb-4">Contactanos para conocer todos los beneficios y condiciones para ser distribuidor oficial.</p>
-            <Link href="https://wa.me/5491134943796" className="text-white border border-white px-4 py-2 rounded inline-block text-sm transition-colors">
+            <Link href="https://wa.me/5491134943796" className="text-white border border-white px-3 py-2 rounded inline-block text-lg transition-colors">
               Contactanos
             </Link>
           </div>

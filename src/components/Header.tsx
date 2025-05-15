@@ -138,7 +138,7 @@ export default function Header() {
           </Link>
           <Link
             href="https://wa.me/5491134943796"
-            className="bg-[#1D2F4E] text-white px-4 py-2 rounded-md hover:bg-[#1D2F4E]/90"
+            className="bg-[#1D2F4E] text-white px-3 py-2 text-md rounded-md hover:bg-[#1D2F4E]/90"
           >
             Contacto
           </Link>
