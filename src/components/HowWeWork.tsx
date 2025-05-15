@@ -57,7 +57,7 @@ export default function HowWeWork() {
         </div>
         
         <div className="text-center mt-10">
-          <Link href="https://wa.me/5491134943796" className="bg-[#1D2F4E] text-white py-2 px-4 rounded text-sm font-medium hover:bg-[#1D2F4E]/90 transition">Contactarnos</Link>
+          <Link href="https://wa.me/5491134943796" className="bg-[#1D2F4E] text-white py-3 px-4 rounded font-medium hover:bg-[#1D2F4E]/90 transition text-lg">Contactanos</Link>
         </div>
       </div>
     </section>

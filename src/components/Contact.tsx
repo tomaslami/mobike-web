@@ -104,14 +104,14 @@ export default function Contact() {
               <button 
                 type="submit" 
                 disabled={isLoading}
-                className="mt-4 w-full bg-[#1D2F4E] text-white py-2 px-4 rounded-md hover:bg-[#1D2F4E]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="mt-4 w-full bg-[#1D2F4E] text-white py-3 px-4 rounded-md hover:bg-[#1D2F4E]/90 transition-colors disabled:opacity-50 text-lg disabled:cursor-not-allowed"
               >
                 {isLoading ? "Enviando..." : "Enviar Mensaje"}
               </button>
             </form>
           </div>
           
-          <div className="contact-info p-6 bg-light-gray rounded-md">
+          <div className="contact-info p-2 md:p-6 bg-light-gray rounded-md">
             <h3 className="text-xl font-semibold mb-4 text-[#1D2F4E]">Información de contacto</h3>
             
             <div className="flex items-start gap-3 mb-4">

@@ -6,7 +6,7 @@ export default function AboutUs() {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
-            <h2 className="text-4xl text-[#1D2F4E] font-semibold mb-4">¿Quiénes somos?</h2>
+            <h2 className="text-4xl text-[#1D2F4E] font-semibold mb-4 text-center md:text-start">¿Quiénes somos?</h2>
             <p className="mb-4 text-[#333333]">
               Somos Mobike, una empresa con más de 10 años de trayectoria en la fabricación de guantes de alta calidad. Nos destacamos por crear productos diseñados para la vida urbana y deportes de invierno, como esquí o snowboard.
             </p>
