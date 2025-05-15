@@ -1,114 +1,67 @@
-"use client"
+import Image from "next/image"
+import Link from "next/link"
 
-import { useState } from "react"
-import { cn } from "@/lib/utils"
-import { motion } from "framer-motion"
-import ProductCard from "./ProductCard"
-
-type Product = {
+export type Catalog = {
   id: string
-  name: string
-  category: string
+  title: string
+  description: string
   imageUrl: string
+  pdfUrl: string
 }
 
+// CatalogCard component for each catalog
+function CatalogCard({ title, description, imageUrl, pdfUrl }: Omit<Catalog, "id">) {
+  return (
+    <div className="relative overflow-hidden shadow-md bg-[#0e223a] flex flex-col justify-end min-h-[320px] aspect-[16/9] max-w-[600px] w-full">
+      <Image
+        src={imageUrl}
+        alt={title}
+        fill
+        className="object-cover w-full h-full absolute inset-0 z-0 opacity-80"
+        sizes="(max-width: 768px) 100vw, 50vw"
+      />
+      <div className="relative z-10 p-5 flex flex-col justify-end h-full bg-gradient-to-t from-[#0e223a]/80 to-transparent border border-[#0e223a]">
+        <div className="flex justify-between items-center">
+          <h3 className="text-white text-xl font-bold mb-1 drop-shadow-lg">{title}</h3>
+          <Link href={pdfUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-[#1a4b8e] font-semibold px-4 py-2  shadow hover:bg-gray-100 transition text-sm cursor-pointer">
+              Ver PDF
+          </Link>
+        </div>
+        <p className="text-white text-sm drop-shadow-lg pt-2">{description}</p>
+      </div>
+    </div>
+  )
+}
 
-const defaultProducts: Product[] = [
+const defaultCatalogs: Catalog[] = [
   {
-    id: "termico-polar-1",
-    name: "Softshell puño tejido",
-    category: "Guantes de Frío",
-    imageUrl: "/images/Kombi-9.png",
+    id: "kombi",
+    title: "Catálogo Kombi",
+    description: "Catálogo de Guantes (Ski - Abrigo - Softshell) Ventas por Mayor",
+    imageUrl: "/images/catalogo/catalogo_2.png",
+    pdfUrl: "/docs/catalogo_KOMBI_2025.pdf",
   },
   {
-    id: "criogenico-1",
-    name: "Liner puño tejido",
-    category: "Guantes de Frío",
-    imageUrl: "/images/Kombi-10.png",
-  },
-  {
-    id: "refrigeracion-1",
-    name: "Polar fleece con patch",
-    category: "Guantes de Frío",
-    imageUrl: "/images/Kombi-11.png",
-  },
-  {
-    id: "termico-polar-2",
-    name: "Guante Ski Reforzado",
-    category: "Guantes de SKI",
-    imageUrl: "/images/Kombi-12.png",
-  },
-  {
-    id: "seguridad-1",
-    name: "Guante Ski Rental",
-    category: "Guantes de SKI",
-    imageUrl: "/images/Kombi-13.png",
-  },
-  {
-    id: "seguridad-2",
-    name: "Guante Ski Reforzado",
-    category: "Guantes de SKI",
-    imageUrl: "/images/Kombi-14.png",
-  },
-  {
-    id: "seguridad-3",
-    name: "Guante Ski Reforzado",
-    category: "Guantes de SKI",
-    imageUrl: "/images/Kombi-15.png",
-  },
-  {
-    id: "seguridad-4",
-    name: "Mitón Infantil",
-    category: "Guantes de SKI",
-    imageUrl: "/images/Kombi-16.png",
+    id: "jgb",
+    title: "Catálogo JGB",
+    description: "Catálogo General de Seguridad. Ventas por Mayor",
+    imageUrl: "/images/catalogo/catalogo_1.png",
+    pdfUrl: "/docs/catalogo_JGBI_2025.pdf",
   },
 ]
 
-
-export default function ProductCatalog({
-}) {
-
-  const [activeCategory, setActiveCategory] = useState<string>("Todos")
-
-  const categories = ["Todos", "Guantes de Frío", "Guantes de SKI"]
-
-  const filteredProducts =
-    activeCategory === "Todos" ? defaultProducts : defaultProducts.filter((product) => product.category === activeCategory)
-
+export default function ProductCatalog({ catalogs = defaultCatalogs }: { catalogs?: Catalog[] }) {
   return (
-    <section id="catalogo" className="py-12 px-4 max-w-7xl mx-auto scroll-m-16">
+    <section className="py-12 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-bold mb-2">Nuestro catálogo</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">Descubre nuestros productos y encuentra el que mejor se adapte a tus necesidades.</p>
+        <h2 className="text-4xl font-bold mb-2 text-[#1a4b8e]">Nuestros Catálogos</h2>
+        <p className="text-gray-700 max-w-2xl mx-auto text-base">
+          Importamos productos de la más alta calidad para satisfacer las necesidades de su industria.
+        </p>
       </div>
-
-      <div className="flex flex-wrap justify-center gap-2 mb-8">
-        {categories.map((category) => (
-          <motion.button
-            key={category}
-            onClick={() => setActiveCategory(category)}
-            className={cn(
-              "px-4 py-2 rounded-md text-sm font-medium transition-colors",
-              activeCategory === category
-                ? "bg-[#1a4b8e] text-white"
-                : "bg-white text-gray-800 border border-gray-300 hover:bg-gray-100",
-            )}
-            whileTap={{ scale: 0.95 }}
-          >
-            {category}
-          </motion.button>
-        ))}
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mx-auto max-w-[1200px]">
-        {filteredProducts.map((product) => (
-          <div key={product.id} className="flex justify-center">
-            <ProductCard
-              name={product.name}
-              imageUrl={product.imageUrl}
-              category={product.category}
-            />
-          </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+        {catalogs.map((catalog) => (
+          <CatalogCard key={catalog.id} {...catalog} />
         ))}
       </div>
     </section>
