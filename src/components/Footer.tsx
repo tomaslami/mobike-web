@@ -10,8 +10,7 @@ export default function Footer() {
             <Image src="/images/logo-mobike-white.png" alt="Mobike Logo" width={190} height={45} className="mb-4" />
             <p className="text-sm">Importador y distribuidor mayorista de guantes de motaje de alta calidad en más de 80 puntos.</p>
             <div className="flex gap-3 mt-4">
-              <Link href="#"><Image src="/icons/icon-facebook.png" alt="Facebook" width={24} height={24} /></Link>
-              <Link href="#"><Image src="/icons/icon-instagram.png" alt="Instagram" width={24} height={24} /></Link>
+              <Link href="https://www.instagram.com/mobikeaccesorios/"><Image src="/icons/icon-instagram.png" alt="Instagram" width={24} height={24} /></Link>
             </div>
           </div>
           
