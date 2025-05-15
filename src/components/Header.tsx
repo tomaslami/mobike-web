@@ -63,7 +63,7 @@ export default function Header() {
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-[#1D2F4E] hover:text-[#1D2F4E]/90"
               >
-                <Menu className="h-6 w-6" />
+                <Menu className="h-8 w-8" />
               </button>
             </SheetTrigger>
             <SheetContent
@@ -119,17 +119,6 @@ export default function Header() {
               >
                 Contacto
               </Link>
-              <SheetClose className="" asChild>
-                <Button
-                  variant="ghost"
-                  size={"lg"}
-                  className="text-white"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <span className="sr-only">Close menu</span>
-                  ×
-                </Button>
-              </SheetClose>
             </SheetContent>
           </Sheet>
         </div>
