@@ -12,7 +12,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Mobike",
-  description: "Impulsando la protección y la moda en cada estación",
+  description: "Mayorista líder en guantes de trabajo y seguridad. Combinamos protección, confort y estilo en productos diseñados para resistir condiciones exigentes durante todo el año.",
   keywords: [
     "guantes de trabajo",
     "guantes industriales",
