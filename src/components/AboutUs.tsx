@@ -3,45 +3,55 @@ import Link from "next/link";
 
 export default function AboutUs() {
   return (
-    <section className="w-full bg-white py-16 scroll-m-16">
-      <div className="max-w-6xl mx-auto px-4 flex flex-row gap-8 items-center">
+    <section className="w-full bg-white py-10 sm:py-14 md:py-20 scroll-m-16">
+      <div className="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row gap-10 md:gap-8 items-center">
         {/* Columna izquierda */}
-        <div className="flex flex-col items-start w-[60%]">
-          <h2 className="text-4xl md:text-4xl font-extrabold text-[#1D2F4E] mb-4 leading-tight text-left">
+        <div className="flex flex-col items-start w-full md:w-[60%]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1D2F4E] mb-4 leading-tight text-left md:text-left text-center md:text-start w-full">
             El mercado necesita protección confiable. Mobike responde<br className="hidden md:block" />
             con experiencia y calidad.
           </h2>
-          <p className="text-[#1D2F4E]/80 text-base md:text-lg mb-6 max-w-xl text-left">
+          <p className="text-[#1D2F4E]/80 text-base sm:text-lg lg:text-xl mb-6 max-w-xl text-left md:text-left text-center md:text-start w-full">
             El sector laboral exige soluciones resistentes y seguras. Con más de 15 años de trayectoria en Argentina, Mobike se posiciona como líder en la importación y distribución mayorista de guantes de trabajo de alto rendimiento.
           </p>
-          <Link href="#contacto" className="group bg-[#1D2F4E] text-white py-3 px-4 rounded font-medium hover:bg-[#1D2F4E]/90 transition flex items-center justify-center text-md">
+          {/* Botón solo visible en md+ */}
+          <Link href="#contacto" className="group w-full md:w-auto hidden md:block">
+            <button className="bg-[#1D2F4E] text-white py-3 px-4 rounded font-medium hover:bg-[#1D2F4E]/90 transition flex items-center justify-center md:justify-start w-full md:w-auto text-md shadow">
               Contactanos
               <span className="ml-2 transform transition-transform group-hover:translate-x-1">→</span>
+            </button>
           </Link>
         </div>
         {/* Columna derecha */}
-        <div className="flex flex-col gap-7 w-[40%]">
+        <div className="flex flex-col gap-6 w-full md:w-[40%]">
           <div className="flex items-start gap-4">
-            <Image src="/icons/aboutus_icon.png" alt="Distribución" width={32} height={32} className="mt-1" />
+            <Image src="/icons/aboutus_icon.png" alt="Distribución" width={36} height={36} className="mt-1 min-w-[36px]" />
             <div>
-              <h3 className="text-[#1D2F4E] font-bold text-lg leading-tight">Distribución Mayorista Especializada</h3>
-              <p className="text-[#1D2F4E]/80 text-base">Aseguramos productos de calidad superior y constante disponibilidad.</p>
+              <h3 className="text-[#1D2F4E] font-bold text-lg sm:text-xl leading-tight">Distribución Mayorista Especializada</h3>
+              <p className="text-[#1D2F4E]/80 text-base sm:text-lg">Aseguramos productos de calidad superior y constante disponibilidad.</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <Image src="/icons/aboutus_icon.png" alt="Seguridad y confort" width={32} height={32} className="mt-1" />
+            <Image src="/icons/aboutus_icon.png" alt="Seguridad y confort" width={36} height={36} className="mt-1 min-w-[36px]" />
             <div>
-              <h3 className="text-[#1D2F4E] font-bold text-lg leading-tight">Combinamos seguridad y confort</h3>
-              <p className="text-[#1D2F4E]/80 text-base">Ofrecemos productos diseñados para resistir condiciones exigentes sin sacrificar la comodidad en el uso diario.</p>
+              <h3 className="text-[#1D2F4E] font-bold text-lg sm:text-xl leading-tight">Combinamos seguridad y confort</h3>
+              <p className="text-[#1D2F4E]/80 text-base sm:text-lg">Ofrecemos productos diseñados para resistir condiciones exigentes sin sacrificar la comodidad en el uso diario.</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <Image src="/icons/aboutus_icon.png" alt="Confianza" width={32} height={32} className="mt-1" />
+            <Image src="/icons/aboutus_icon.png" alt="Confianza" width={36} height={36} className="mt-1 min-w-[36px]" />
             <div>
-              <h3 className="text-[#1D2F4E] font-bold text-lg leading-tight">Relaciones basadas en confianza</h3>
-              <p className="text-[#1D2F4E]/80 text-base">Nos enfocamos en brindar atención personalizada, asesoramiento directo y un servicio logístico eficiente adaptado a cada negocio.</p>
+              <h3 className="text-[#1D2F4E] font-bold text-lg sm:text-xl leading-tight">Relaciones basadas en confianza</h3>
+              <p className="text-[#1D2F4E]/80 text-base sm:text-lg">Nos enfocamos en brindar atención personalizada, asesoramiento directo y un servicio logístico eficiente adaptado a cada negocio.</p>
             </div>
           </div>
+          {/* Botón solo visible en mobile (sm y menores) */}
+          <Link href="#contacto" className="group w-full block md:hidden mt-4">
+            <button className="bg-[#1D2F4E] text-white py-3 px-4 rounded font-medium hover:bg-[#1D2F4E]/90 transition flex items-center justify-center w-full text-md shadow">
+              Contactanos
+              <span className="ml-2 transform transition-transform group-hover:translate-x-1">→</span>
+            </button>
+          </Link>
         </div>
       </div>
     </section>
