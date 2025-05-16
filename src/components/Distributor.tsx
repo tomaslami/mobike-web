@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Distributor() {
   return (
-    <section id="distribuidor" className="section bg-light-gray scroll-m-16">
+    <section id="distribuidor" className="section bg-light-gray scroll-m-16 bg-[#F5F5F5]">
       <div className="container text-center">
         <h2 className="text-center text-4xl font-semibold text-[#1D2F4E] mb-4">¿Querés sumarte como distribuidor?</h2>
         <p className="mx-auto max-w-2xl mb-8">

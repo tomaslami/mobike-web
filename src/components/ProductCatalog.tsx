@@ -52,7 +52,7 @@ const defaultCatalogs: Catalog[] = [
 
 export default function ProductCatalog({ catalogs = defaultCatalogs }: { catalogs?: Catalog[] }) {
   return (
-    <section className="py-12 px-4 max-w-7xl mx-auto">
+    <section className="py-12 px-4 max-w-7xl mx-auto bg-white">
       <div className="text-center mb-10">
         <h2 className="text-4xl font-bold mb-2 text-[#1D2F4E]">Nuestros Catálogos</h2>
         <p className="text-gray-700 max-w-2xl mx-auto text-base">
