@@ -7,19 +7,17 @@ export default function AboutUs() {
       <div className="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row gap-10 md:gap-8 items-center">
         {/* Columna izquierda */}
         <div className="flex flex-col items-start w-full md:w-[60%]">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1D2F4E] mb-4 leading-tight text-left md:text-left text-center md:text-start w-full">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1D2F4E] mb-4 leading-tight text-center md:text-start w-full">
             El mercado necesita protección confiable. Mobike responde<br className="hidden md:block" />
             con experiencia y calidad.
           </h2>
-          <p className="text-[#1D2F4E]/80 text-base sm:text-lg lg:text-xl mb-6 max-w-xl text-left md:text-left text-center md:text-start w-full">
+          <p className="text-[#1D2F4E]/80 text-base sm:text-lg lg:text-xl mb-6 max-w-xl text-center md:text-start w-full">
             El sector laboral exige soluciones resistentes y seguras. Con más de 15 años de trayectoria en Argentina, Mobike se posiciona como líder en la importación y distribución mayorista de guantes de trabajo de alto rendimiento.
           </p>
           {/* Botón solo visible en md+ */}
-          <Link href="#contacto" className="group w-full md:w-auto hidden md:block">
-            <button className="bg-[#1D2F4E] text-white py-3 px-4 rounded font-medium hover:bg-[#1D2F4E]/90 transition flex items-center justify-center md:justify-start w-full md:w-auto text-md shadow">
-              Contactanos
-              <span className="ml-2 transform transition-transform group-hover:translate-x-1">→</span>
-            </button>
+          <Link href="https://wa.me/+541134943796" className="hidden group bg-[#1D2F4E] text-white py-3 px-4 rounded font-medium hover:bg-[#1D2F4E]/90 transition md:flex items-center justify-center text-lg ml-0">
+            Contactanos
+            <span className="ml-2 transform transition-transform group-hover:translate-x-1">→</span>
           </Link>
         </div>
         {/* Columna derecha */}
@@ -46,12 +44,10 @@ export default function AboutUs() {
             </div>
           </div>
           {/* Botón solo visible en mobile (sm y menores) */}
-          <Link href="#contacto" className="group w-full block md:hidden mt-4">
-            <button className="bg-[#1D2F4E] text-white py-3 px-4 rounded font-medium hover:bg-[#1D2F4E]/90 transition flex items-center justify-center w-full text-md shadow">
-              Contactanos
-              <span className="ml-2 transform transition-transform group-hover:translate-x-1">→</span>
-            </button>
-          </Link>
+          <Link href="https://wa.me/+541134943796" className=" md:hidden group w-fit mx-auto bg-[#1D2F4E] text-white py-3 px-4 rounded font-medium hover:bg-[#1D2F4E]/90 transition flex items-center justify-center text-lg">
+        Contactanos por WhatsApp
+          <span className="ml-2 transform transition-transform group-hover:translate-x-1">→</span>
+        </Link>
         </div>
       </div>
     </section>

@@ -57,7 +57,10 @@ export default function HowWeWork() {
         </div>
         
         <div className="text-center mt-10">
-          <Link href="https://wa.me/5491134943796" className="bg-[#1D2F4E] text-white py-3 px-4 rounded font-medium hover:bg-[#1D2F4E]/90 transition text-md">Contactanos</Link>
+        <Link href="#contacto" className="group w-fit mx-auto bg-[#1D2F4E] text-white py-3 px-4 rounded font-medium hover:bg-[#1D2F4E]/90 transition flex items-center justify-center text-lg">
+        Contactanos
+          <span className="ml-2 transform transition-transform group-hover:translate-x-1">→</span>
+        </Link>
         </div>
       </div>
     </section>
